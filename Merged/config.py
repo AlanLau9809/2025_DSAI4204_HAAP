@@ -1,7 +1,7 @@
 # config.py
 
 # File path for the dataset
-DATA_PATH = "/Users/chunmanchan/Downloads/Alan/DSAI4204/archive/heart.csv"
+DATA_PATH = r"C:\Users\mh980\OneDrive - The Hong Kong Polytechnic University\Y4 S1\DSAI4204\HAAP\archive\heart.csv"
 
 # List of categorical and continuous feature names
 CLUSTER_COL = 'cluster_label'
@@ -41,4 +41,4 @@ SVM_CHECKPOINT = "checkpoints/svm_model.joblib"
 RF_CHECKPOINT = "checkpoints/rf_model.joblib"
 GB_CHECKPOINT = "checkpoints/gb_model.joblib"
 VOTING_CHECKPOINT = "checkpoints/voting_model.joblib"
-CLUSTER_LABELS_PATH = "../Unsupervised/checkpoints/cluster_labels.csv"
+CLUSTER_LABELS_PATH = "Unsupervised/checkpoints/cluster_labels.csv"

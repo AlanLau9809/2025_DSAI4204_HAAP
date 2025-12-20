@@ -1,7 +1,7 @@
 # runHaap.py
 
 # ==========================================
-# HEART ATTACK PREDICTION PIPELINE
+# HEART ATTACK PREDICTION PIPELINE (SUPERVISED)
 # ==========================================
 import argparse
 import matplotlib.pyplot as plt
@@ -102,33 +102,9 @@ def main(use_checkpoints, compare_individual=False):
     print("\nSTEP 5: PERFORMANCE SUMMARY")
     print("-" * 50)
     
-    online_benchmark = 0.903  # 90.3% from online resource
     print(f"\nFINAL PERFORMANCE SUMMARY:")
     print(f"   Test Accuracy:     {accuracy:.4f} ({accuracy*100:.2f}%)")
     print(f"   ROC-AUC Score:     {roc_auc:.4f}")
-        
-    #     # Suggestions for improvement
-    #     print(f"\nSUGGESTIONS FOR FURTHER IMPROVEMENT:")
-    #     if accuracy < 0.85:
-    #         print("   - Consider more aggressive outlier removal")
-    #         print("   - Try additional feature engineering techniques")
-    #         print("   - Experiment with different feature transformations")
-    #     elif accuracy < 0.90:
-    #         print("   - Fine-tune hyperparameters further with larger grid search")
-    #         print("   - Try advanced ensemble methods (stacking, blending)")
-    #         print("   - Consider feature selection optimization")
-    #     else:
-    #         print("   - Model is performing very well!")
-    #         print("   - Consider cross-validation for more robust evaluation")
-    
-    # # Show key improvements made
-    # print(f"\nKEY OPTIMIZATIONS APPLIED:")
-    # print("   Comprehensive outlier handling (Winsorization, IQR)")
-    # print("   Feature transformation (sqrt for skewed distributions)")
-    # print("   Correlation-based feature selection")
-    # print("   Optimized hyperparameters from online resource")
-    # print("   Enhanced data split (90/10 for more training data)")
-    # print("   Ensemble approach for improved robustness")
     
     print(f"\nPipeline completed successfully!")
     return final_model, accuracy, roc_auc

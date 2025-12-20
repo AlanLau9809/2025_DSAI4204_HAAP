@@ -14,6 +14,7 @@ def load_data():
 
     # Load cluster labels and merge with the main DataFrame
     try:
+        print(f"Attempting to load cluster labels from: {CLUSTER_LABELS_PATH}") # Added print statement
         cluster_labels_df = pd.read_csv(CLUSTER_LABELS_PATH, index_col=0)
         df = df.merge(cluster_labels_df, left_index=True, right_index=True, how='left')
         print(f"Cluster labels loaded from {CLUSTER_LABELS_PATH} and merged.")
