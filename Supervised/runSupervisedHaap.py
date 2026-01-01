@@ -12,7 +12,7 @@ warnings.filterwarnings('ignore')
 from dataloader import load_data
 from preprocessing import preprocess_data, split_data
 from train import train_ensemble_model, get_best_individual_model
-from evaluate import final_report, plot_correlation_matrix
+from evaluate import final_report, plot_correlation_matrix, plot_feature_importance # Added plot_feature_importance
 from config import VAL_SIZE
 
 # Styling for plots
@@ -94,7 +94,7 @@ def main(use_checkpoints, compare_individual=False):
     print("\nSTEP 4: FINAL EVALUATION ON TEST SET")
     print("-" * 50)
     
-    accuracy, roc_auc = final_report(final_model, X_test, y_test)
+    accuracy, roc_auc = final_report(final_model, X_test, y_test, X_test.columns)
 
     # ==========================================
     # 5. PERFORMANCE SUMMARY

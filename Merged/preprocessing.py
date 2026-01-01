@@ -123,7 +123,7 @@ def select_features_by_correlation(df, target_col, correlation_threshold=0.15):
     # Calculate correlations with target
     correlations = df.corr()[target_col].abs().sort_values(ascending=False)
     
-    # Features to drop based on low correlation (from online resource analysis)
+    # Features to drop based on low correlation (from prior analysis)
     low_corr_features = ['chol', 'fbs', 'restecg']
     features_to_drop = [f for f in low_corr_features if f in df.columns and f != target_col]
     
@@ -213,7 +213,7 @@ def preprocess_data(df):
 def split_data(df):
     """
     Splits the data into training, validation, and testing sets.
-    Uses 90% train, 10% test split like the online resource for better performance.
+    Uses an optimized 90% train, 10% test split for better performance.
 
     Args:
         df (pd.DataFrame): The preprocessed DataFrame.

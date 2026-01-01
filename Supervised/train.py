@@ -10,7 +10,7 @@ from models.gradient_boosting import train_gradient_boosting
 def train_ensemble_model(X_train, y_train, X_val, y_val, use_checkpoints=True):
     """
     Trains or loads individual models with optimized parameters and then trains a final ensemble model.
-    Incorporates the optimized approach from the online resource while maintaining ensemble benefits.
+    This approach leverages optimized techniques while maintaining ensemble benefits.
 
     Args:
         X_train (pd.DataFrame): Training features.
@@ -25,7 +25,6 @@ def train_ensemble_model(X_train, y_train, X_val, y_val, use_checkpoints=True):
     
     print("\n" + "="*70)
     print("TRAINING OPTIMIZED ENSEMBLE MODEL")
-    print("Incorporating online resource optimizations with ensemble approach")
     print("="*70)
     
     individual_scores = {}

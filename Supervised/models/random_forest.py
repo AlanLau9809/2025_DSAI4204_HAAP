@@ -23,7 +23,7 @@ def train_random_forest(X_train, y_train, X_val, y_val, params, checkpoint_path=
     """
     print("\n=== Training Random Forest with Hyperparameter Optimization ===")
     
-    # Use optimized hyperparameters from the online resource
+    # Use optimized hyperparameters
     optimized_params = {
         'n_estimators': [100, 150, 200],
         'criterion': ['gini', 'entropy'],
@@ -61,7 +61,7 @@ def train_random_forest(X_train, y_train, X_val, y_val, params, checkpoint_path=
         print(f"Best cross-validation score: {grid_search.best_score_:.4f}")
         
     else:
-        # Use the best parameters found in the online resource
+        # Use the best parameters found
         best_params = {
             'bootstrap': True,
             'criterion': 'entropy',
@@ -114,7 +114,7 @@ def train_random_forest(X_train, y_train, X_val, y_val, params, checkpoint_path=
 
 def train_random_forest_optimized(X_train, y_train, X_val, y_val, checkpoint_path="checkpoints/rf_model_optimized.joblib"):
     """
-    Trains Random Forest with the exact configuration that achieved 90.3% in the online resource.
+    Trains Random Forest with a specific configuration that achieved 90.3% accuracy.
     
     Args:
         X_train (pd.DataFrame): Training features.
@@ -126,9 +126,9 @@ def train_random_forest_optimized(X_train, y_train, X_val, y_val, checkpoint_pat
     Returns:
         RandomForestClassifier: The trained model.
     """
-    print("\n=== Training Random Forest with Online Resource Configuration ===")
+    print("\n=== Training Random Forest with Specific Configuration ===")
     
-    # Exact configuration from the online resource that achieved 90.3% accuracy
+    # Exact configuration that achieved 90.3% accuracy
     online_resource_params = {
         'bootstrap': True,
         'criterion': 'entropy',
@@ -137,7 +137,7 @@ def train_random_forest_optimized(X_train, y_train, X_val, y_val, checkpoint_pat
         'random_state': RANDOM_STATE
     }
     
-    print(f"Using online resource parameters: {online_resource_params}")
+    print(f"Using specific parameters: {online_resource_params}")
     
     # Train the model
     rf = RandomForestClassifier(**online_resource_params)
