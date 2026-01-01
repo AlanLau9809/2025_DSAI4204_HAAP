@@ -146,3 +146,7 @@ This project has proven that heart attack risk can be predicted with over 90% ac
 ## Reference
 
 [1] parthpandit05, “2025 heart attack analysis and prediction,” Kaggle, https://www.kaggle.com/code/parthpandit05/2025-heart-attack-analysis-and-prediction.
+
+## License
+
+This project is developed for academic purposes as part of PolyU DSAI4204 - Data Mining and Data Warehousing course. All rights reserved for educational use.
